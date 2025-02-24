@@ -79,9 +79,6 @@
                                 <a class="nav-link" href="#statistik" id="link-statistik">Statistik</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#persyaratan" id="link-persyaratan">Info Pendaftaran</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="./login" id="link-jadwal">Admin</a>
                             </li>
                         </ul>
@@ -181,21 +178,21 @@
                             </div>
                         </div>
                         <div class="col-sm-4">
-                            <div class="card card-login bg-info">
+                            <div class="card card-login bg-primary">
                                 <div class="card-body">
                                     <img src="<?= $setting['logo_ppdb'] ?>" alt="" width="85%">
                                     <br>
                                     <form id="form-login">
                                         <div class="form-group">
                                             <span class="fa fa-user"></span>
-                                            <input type="text" onkeyup="this.value = this.value.toUpperCase()" class="form-control" name="username" placeholder="Masukkan NISN" required autocomplete="off">
+                                            <input type="text" class="form-control" name="username" placeholder="Masukkan Nomor Whatsapp" required autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <span class="fa fa-key"></span>
                                             <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password">
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary btn-block btn-login" id="btnsimpan">
+                                        <button type="submit" class="btn btn-success btn-block btn-login" id="btnsimpan">
                                             Masuk
                                         </button>
                                     </form>
@@ -209,52 +206,6 @@
                     </div>
                 </div>
             </div>
-            <div class="home-content">
-                <section id="tentang">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 d-flex align-items-center">
-                                <div class="col-md-12 animated bounceInLeft">
-                                    <div class="card">
-                                        <div class="card-header bg-info">
-                                            <h4>Pendaftaran Akun</h4>
-                                        </div>
-                                        <form id="form-daftar">
-                                            <div class="card-body">
-                                                <input type="date" name="tgl_daftar" class="form-control datepicker" value="<?= date('Y') ?>" hidden>
-
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="nama">NAMA LENGKAP*</label>
-                                                        <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off" required>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="nohp">NO HANDPHONE</label>
-                                                        <input type="number" class="form-control" name="nohp" placeholder="No HP Whatsapp" required>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-group">
-                                                    <label for="inputPassword4">PASSWORD (Mohon Diingat!)</label>
-                                                    <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password" required>
-                                                </div>
-                                            </div>
-                                            <div class="card-header bg-white">
-                                                <button id='btnsimpan' type="submit" class="btn btn-lg btn-primary">DAFTAR AKUN</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-6">
-                                <p align="center">
-                                    <img src="assets/alur.png" align="center" width="600" style="max-width: 100%" />
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
         <?php } ?>
         <?php if ($awal <= $akhir) { ?>
             <div class="home-banner">
@@ -266,14 +217,14 @@
                             <div class="carousel-item active">
                                 <div>
                                     <h5 data-animation="animated fadeInDownBig">
-                                        Selamat Datang Di Web PPDB Online
+                                        Selamat Datang Di Website PPDB Online
                                     </h5>
                                     <br />
                                     <p data-animation="animated slideInRight" data-delay="1s">
-                                        Aplikasi Penerimaan Peserta didik baru Tahun Pelajaran 2022/2023 <?= $setting['nama_sekolah'] ?>.
+                                        Website Resmi Penerimaan Peserta Didik Baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
                                     </p>
                                     <p data-animation="animated slideInRight" data-delay="2s">
-                                        Pendaftaran Siswa dan Siswi Baru Tahun 2022 ini Belum Dibuka.
+                                        Pendaftaran Santri dan Santriwati Baru Tahun 2025 ini Belum Dibuka.
                                     </p>
                                     <p data-animation="animated flipInX" data-delay="3s">
                                         <a href="" class="btn btn-success nav-link">
@@ -288,22 +239,21 @@
                             </center>
                         </div>
                         <div class="col-sm-4">
-                            <div class="card card-login bg-info">
+                            <div class="card card-login bg-primary">
                                 <div class="card-body">
-                                    <div class="avatar bg-info" align="center">
-                                        <img src="<?= $setting['logo_ppdb'] ?>" alt="" height="70%" width="70%">
-                                    </div>
+                                    <img src="<?= $setting['logo_ppdb'] ?>" alt="" width="85%">
                                     <br>
                                     <form id="form-login">
                                         <div class="form-group">
                                             <span class="fa fa-user"></span>
-                                            <input type="text" onkeyup="this.value = this.value.toUpperCase()" class="form-control" name="username" placeholder="Masukkan NISN" required autocomplete="off" disabled>
+                                            <input type="text" class="form-control" name="username" placeholder="Masukkan Nomor Whatsapp" required autocomplete="off">
                                         </div>
                                         <div class="form-group">
                                             <span class="fa fa-key"></span>
-                                            <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password" disabled>
+                                            <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password">
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-block btn-login" id="btnsimpan">
+
+                                        <button type="submit" class="btn btn-success btn-block btn-login" id="btnsimpan">
                                             Masuk
                                         </button>
                                     </form>
@@ -317,215 +267,80 @@
                     </div>
                 </div>
             </div>
-            <div class="home-content">
-                <section id="tentang">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-6 d-flex align-items-center">
-                                <div class="col-md-12 animated bounceInLeft">
-                                    <div class="card">
-                                        <div class="card-header bg-info">
-                                            <h4>Formulir Pendaftaran</h4>
-                                        </div>
-                                        <form id="form-daftar">
-                                            <div class="card-body">
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="jenis">JENIS PENDAFTARAN</label>
-                                                        <select class="form-control" name="jenis" id="jenis">
-                                                            <option value="1">Siswa Baru</option>
-                                                            <option value="2">Pindahan</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="nisn">NISN* Sebagai Username Anda</label>
-                                                        <input type="number" maxlength="10" class="form-control" name="nisn" placeholder="NISN" autocomplete="off" disabled>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="nama">NAMA LENGKAP*</label>
-                                                        <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off" disabled>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="nohp">NO HANDPHONE</label>
-                                                        <input type="number" class="form-control" name="nohp" placeholder="No HP Whatsapp" disabled>
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="tempat">TEMPAT LAHIR</label>
-                                                        <input type="text" class="form-control" name="tempat" disabled>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <label for="tgllahir">TANGGAL LAHIR</label>
-                                                        <input type="date" class="form-control datepicker" name="tgllahir" disabled>
-                                                    </div>
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputPassword4">PASSWORD (Mohon Diingat!)</label>
-                                                    <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password" disabled>
-                                                </div>
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">Refresh Kode</a>
-
-                                                        <img class="p-b-5" id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" style="height:70px" /><br>
-                                                    </div>
-                                                    <div class="form-group col-md-6">
-                                                        <input class="form-control" type="text" name="kodepengaman" placeholder="masukan kode" disabled>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="card-footer">
-                                                <button id='btnsimpan' type="submit" class="btn btn-lg btn-primary">SIMPAN DATA</button>
-                                            </div>
-                                        </form>
+        <?php } ?>
+        <div class="home-content">
+            <section id="tentang">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex align-items-center">
+                            <div class="col-md-12 animated bounceInLeft">
+                                <div class="card">
+                                    <div class="card-header bg-primary">
+                                        <h4>Pendaftaran Akun</h4>
                                     </div>
+                                    <form id="form-daftar">
+                                        <div class="card-body">
+                                            <input type="date" name="tgl_daftar" class="form-control datepicker" value="<?= date('Y-m-d') ?>" hidden>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="nama">NAMA LENGKAP*</label>
+                                                    <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off" required>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <label for="nohp">NO HANDPHONE</label>
+                                                    <input type="number" class="form-control" name="no_hp" placeholder="No HP Whatsapp" required>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="inputPassword4">PASSWORD (Mohon Diingat!)</label>
+                                                <input type="password" class="form-control" name="password" id="inputPassword4" placeholder="Password" required>
+                                            </div>
+                                        </div>
+                                        <div class="card-header bg-white">
+                                            <button id='btnsimpan' type="submit" class="btn btn-lg btn-success"><b>DAFTAR AKUN</b></button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
-                            <br>
-                            <div class="col-sm-6">
-                                <p align="center">
-                                    <img src="assets/alur.png" align="center" width="600" style="max-width: 90%" />
-                                </p>
-                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <p align="center">
+                                <img src="assets/alur.png" align="center" width="600" style="max-width: 100%" />
+                            </p>
                         </div>
                     </div>
-                </section>
-            </div>
-        <?php } ?>
-        <section class="bg-light statistik" id="statistik">
+                </div>
+            </section>
+        </div>
+        <section class="bg-light statistik" id="statistik" style="padding-top: 30px;">
             <div class="container">
-                <h5 class="text-center">Data Pendaftar </h5>
-                <h6 class="text-center">Peserta Didik Baru <?= $setting['nama_sekolah'] ?> Tahun 2022</h6>
+                <h1 class="text-center"><b>Statistik</b></h1>
+                <h6 class="text-center">Peserta Didik Baru <?= $setting['nama_sekolah'] ?> Tahun <?= date('Y') ?></h6>
                 <div class="row mt-12">
                     <div class="col-sm-6">
                         <div class="card mt-2">
-                            <div class="card-header bg-primary">Data Pendaftar</div>
+                            <div class="card-header bg-primary text-white">Jumlah Pendaftar</div>
                             <div class="card-body">
                                 <h2 class="text-center"><?= rowcount($koneksi, 'daftar') ?></h2>
                             </div>
                         </div>
                     </div>
-                    <!--<div class="col-sm-4">
-                                <div class="card mt-2">
-                                    <div class="card-header bg-secondary">Data Siswa</div>
-                                    <div class="card-body">
-                                        <h2 class="text-center"><?= rowcount($koneksi, 'siswa') ?></h2>
-                                    </div>
-                                </div>
-                            </div>-->
                     <div class="col-sm-6">
                         <div class="card mt-2">
-                            <div class="card-header bg-success">Quota Pendaftar</div>
+                            <div class="card-header bg-primary text-white">Quota Pendaftar</div>
                             <div class="card-body">
-                                <h2 class="text-center"><?php $kuota = mysqli_fetch_array(mysqli_query($koneksi, "select *, sum(kuota) as kuota from jurusan"));
-                                                        echo $kuota['kuota']; ?></h2>
+                                <h2 class="text-center">
+                                    <?php $kuota = mysqli_fetch_array(mysqli_query($koneksi, "select *, sum(kuota) as kuota from jurusan"));
+                                    echo $kuota['kuota']; ?>
+                                </h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="bg-light statistik" id="persyaratan">
-            <div class="container">
-                <h5 class="text-center">Info Pendaftaran </h5>
-                <h6 class="text-center">Peserta Didik Baru <?= $setting['nama_sekolah'] ?> Tahun 2022</h6>
-                <div class="row mt-12">
-                    <div class="col-sm-6">
-                        <div class="card mt-2">
-                            <div class="card-header bg-primary">Cara Daftar</div>
-                            <div class="card-body">
-                                <div class="col-12 animated bounceIn">
-
-                                    <div class="activities">
-                                        <div class="activity">
-                                            <div class="activity-icon bg-primary text-white shadow-primary">
-                                                1
-                                            </div>
-                                            <div class="activity-detail">
-                                                <p>Calon Siswa mendaftar di web pendaftaran.</p>
-                                                <p><a href="#tentang" class="btn btn-primary btn-block btn-login">
-                                                        Klik Disini</a>.</p>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <div class="activities">
-                                        <div class="activity">
-                                            <div class="activity-icon bg-primary text-white shadow-primary">
-                                                2
-                                            </div>
-                                            <div class="activity-detail">
-                                                <p>Jika selesai pendaftaran silahkan login dengan username dan password saat pendaftaran</p>
-                                                <p><a href="#tentang" class="btn btn-success btn-block btn-login">
-                                                        Daftar Disini
-                                                    </a></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="activities">
-                                        <div class="activity">
-                                            <div class="activity-icon bg-primary text-white shadow-primary">
-                                                3
-                                            </div>
-                                            <div class="activity-detail">
-                                                <p>Lengkapi Formulir yang diberikan dengan data yang benar.</p>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="card mt-2">
-                            <div class="card-header bg-secondary">Pengumuman</div>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-12 animated bounceIn">
-                                        <div class="card">
-
-                                            <div class="card-body">
-                                                <div class="activities">
-                                                    <?php $query = mysqli_query($koneksi, "SELECT * FROM pengumuman where jenis='2'");
-                                                    while ($data = mysqli_fetch_array($query)) {
-                                                    ?>
-                                                        <div class="activity">
-                                                            <div class="activity-icon bg-primary text-white shadow-primary">
-                                                                <i class="fas fa-bullhorn"></i>
-                                                            </div>
-                                                            <div class="activity-detail">
-                                                                <div class="mb-2">
-                                                                    <span class="text-job text-primary"><?= $data['tgl'] ?></span>
-                                                                    <span class="bullet"></span>
-                                                                    <a class="text-job" href="#">View</a>
-
-                                                                </div>
-                                                                <h5><?= $data['judul'] ?></h5>
-                                                                <p><?= $data['pengumuman'] ?></p>
-                                                            </div>
-                                                        </div>
-                                                    <?php } ?>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="bg-light statistik" id="statistik">
+        <hr size="2" width="70%">
+        <section class="bg-light statistik mb-5" id="statistik">
             <div class="container">
                 <div class="row mt-12">
                     <div class="col-sm-12">
@@ -604,7 +419,7 @@
 <script src="assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
 
 <script src="assets/modules/popper.js"></script>
-<script src="assets/modules/tooltip.js"></script>
+<!-- <script src="assets/modules/tooltip.js"></script> -->
 <script src="assets/modules/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
 <script src="assets/modules/moment.min.js"></script>
@@ -661,7 +476,7 @@
                 $('#btnsimpan').prop('disabled', false);
                 if (json.pesan == 'ok') {
                     iziToast.success({
-                        title: 'Mantap!',
+                        title: 'Sukses!',
                         message: 'Login Berhasil',
                         position: 'topRight'
                     });
@@ -729,12 +544,12 @@
                 $('#btnsimpan').prop('disabled', false);
                 if (json.pesan == 'ok') {
                     iziToast.success({
-                        title: 'Mantap!',
+                        title: 'Selamat!',
                         message: 'Data berhasil disimpan',
                         position: 'topRight'
                     });
                     setTimeout(function() {
-                        $('#home').load('konfirmasi.php?id=' + json.id + '&nisn=' + json.nisn + '&pass=' + json.pass + '&nama=' + json.nama);
+                        $('#home').load('konfirmasi.php?id=' + json.id + '&no_hp=' + json.no_hp + '&pass=' + json.pass + '&nama=' + json.nama);
                     }, 2000);
 
                 } else {
@@ -743,8 +558,6 @@
                         message: json.pesan,
                         position: 'topCenter'
                     });
-                    document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random();
-
                 }
                 //$('#bodyreset').load(location.href + ' #bodyreset');
             }
