@@ -20,7 +20,6 @@ if ($pg == '') {
     include "mod_berkas/download.php";
 } elseif ($pg == 'alumni') {
     include "../login/mod_siswa/alumni.php";
-
 } elseif ($pg == 'detail') {
     include "mod_formulir/detail.php";  //Modul Detail Pendaftaran
 } elseif ($pg == 'bayar') {

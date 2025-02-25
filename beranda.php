@@ -272,7 +272,7 @@
             <section id="tentang">
                 <div class="container">
                     <div class="row">
-                        <div class="col-sm-6 d-flex align-items-center">
+                        <div class="col-sm-6 d-flex align-items-center mb-3">
                             <div class="col-md-12 animated bounceInLeft">
                                 <div class="card">
                                     <div class="card-header bg-primary">
