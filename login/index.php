@@ -4,7 +4,6 @@ require("../config/database.php");
 require("../config/function.php");
 require("../config/functions.crud.php");
 
-
 if (isset($_SESSION['id_user'])) {
   $user = mysqli_fetch_array(mysqli_query($koneksi, "select * from user where id_user='$_SESSION[id_user]'"));
 ?>
@@ -14,17 +13,16 @@ if (isset($_SESSION['id_user'])) {
   <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>PPDB | <?= $setting['nama_sekolah'] ?></title>
+    <title>PSB | <?= $setting['nama_sekolah'] ?></title>
 
-	<link rel="shortcut icon" href="../<?= $setting['logo'] ?>" />
-	<!-- General CSS Files -->
+    <link rel="shortcut icon" href="../<?= $setting['logo'] ?>" />
+    <!-- General CSS Files -->
 
     <link rel="stylesheet" href="../assets/modules/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/modules/fontawesome/css/all.min.css">
 
-	<link rel='stylesheet' href='../dist/css/AdminLTE.css' />
-	<link rel='stylesheet' href='../dist/css/costum.css' />
-	
+    <link rel='stylesheet' href='../dist/css/AdminLTE.css' />
+    <link rel='stylesheet' href='../dist/css/costum.css' />
 
     <!-- CSS Libraries
     <link rel="stylesheet" href="../assets/modules/jqvmap/dist/jqvmap.min.css">
@@ -55,32 +53,30 @@ if (isset($_SESSION['id_user'])) {
     <script src="../assets/modules/sweetalert/sweetalert.min.js"></script>
     <!-- JS Libraies -->
     <script src="../assets/modules/cleave-js/dist/cleave.min.js"></script>
-	<style>
-            .btn {
-                cursor: pointer
-            }
+    <style>
+      .btn {
+        cursor: pointer
+      }
 
-            .preloader {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 9999;
-                background-color: #fff;
-                opacity: 0.8;
-            }
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background-color: #fff;
+        opacity: 0.8;
+      }
 
-            .preloader .loading {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                font: 14px arial;
-            }
-        </style>
-
-
+      .preloader .loading {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font: 14px arial;
+      }
+    </style>
 
     <!-- <script>
       window.dataLayer = window.dataLayer || [];
@@ -102,7 +98,6 @@ if (isset($_SESSION['id_user'])) {
         left: 0;
         z-index: 900;
         background-color: #000;
-
       }
     </style>
     <!-- Smartsupp Live Chat script -->
@@ -125,106 +120,93 @@ if (isset($_SESSION['id_user'])) {
     </script> -->
   </head>
 
-  
-    <body class="fixed-navbar fixed-layout">
-        
-  
+  <body class="fixed-navbar fixed-layout">
+
     <div id="app">
-	
+
       <div class="main-wrapper main-wrapper-1">
         <div class="navbar-bg"></div>
         <nav class="navbar navbar-expand-lg main-navbar">
           <form class="form-inline mr-auto">
             <ul class="navbar-nav mr-3">
-              
-				<a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i>
-				   </a>
+              <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i>
+              </a>
             </ul>
-
           </form>
-         
-   
-
-		  
         </nav>
+        <script>
+          // Function ini dijalankan ketika Halaman ini dibuka pada browser
+          $(function() {
+            setInterval(timestamp, 1000); //fungsi yang dijalan setiap detik, 1000 = 1 detik
+          });
 
- <script>
-// Function ini dijalankan ketika Halaman ini dibuka pada browser
-$(function(){
-setInterval(timestamp, 1000);//fungsi yang dijalan setiap detik, 1000 = 1 detik
-});
- 
-//Fungi ajax untuk Menampilkan Jam dengan mengakses File ajax_timestamp.php
-function timestamp() {
-$.ajax({
-url: 'waktu.php',
-success: function(data) {
-$('#timestamp').html(data);
-},
-});
-}
-</script>
-<script
-src="https://code.jquery.com/jquery-2.2.4.min.js"
-integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-crossorigin="anonymous"></script>
-		
-     <link rel="stylesheet" href="../assets/css/user.css">                                      
+          //Fungi ajax untuk Menampilkan Jam dengan mengakses File ajax_timestamp.php
+          function timestamp() {
+            $.ajax({
+              url: 'waktu.php',
+              success: function(data) {
+                $('#timestamp').html(data);
+              },
+            });
+          }
+        </script>
+        <script
+          src="https://code.jquery.com/jquery-2.2.4.min.js"
+          integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+          crossorigin="anonymous"></script>
 
-	
-	</div>		 
-		 
-        <div class="main-sidebar sidebar-style-2">
-          <aside id="sidebar-wrapper">
-		  
-            <div class="sidebar-brand bg-info">
-              <img src="../<?= $setting['logo_ppdb'] ?>" width="200" alt="LOGO">&nbsp;
-            </div>
-			<div class="menu-header">
-			
-				<ul>
-					<li>
-						<a style="color:#f2ee07" href="." class="btn-logout">
-							<span class="fas fa-home "></span><br>Home
-						</a>
-					</li>
-					<li>
-						<a style="color:#f2b707" class="btn-logout" href="?pg=setting">
-							<span class="fas fa-user-cog "></span><br>Setting
-						</a>
-					</li>
-					<li>
-						<a style="color:#f27907" href="logout.php" class="btn-logout"> <span class="fas fa-sign-out-alt  "></span><br>Keluar</a>
-					</li>
-				</ul>
-			</div>
-			<div class="sidebar-brand sidebar-brand-sm">
-              <a href="#">PPDB</a>
-            </div>
-			
-           
-            <?php include "menu.php" ?>
-            
-          </aside>
-        </div>
-
-        <!-- Main Content -->
-		
-        <div class="main-content">
-          <section class="section">
-            <?php include "content.php"; ?>
-          </section>
-        </div>
-        <footer class="main-footer">
-          <div class="footer-left">
-            Copyright &copy; <?= date('Y') ?> PPDB | <?= $setting['nama_sekolah'] ?> 
-          </div>
-          <div class="footer-right">
-		   Versi 1.3
-
-          </div>
-        </footer>
+        <link rel="stylesheet" href="../assets/css/user.css">
       </div>
+
+      <div class="main-sidebar sidebar-style-2">
+        <aside id="sidebar-wrapper">
+
+          <div class="bg-info">
+            <img src="../<?= $setting['logo_ppdb'] ?>" width="200px" alt="LOGO" style="margin: 0 0 5px 5px;">
+          </div>
+          <div class="menu-header">
+            <ul>
+              <li>
+                <a style="color:#f2ee07" href="." class="btn-logout">
+                  <span class="fas fa-home "></span><br>Home
+                </a>
+              </li>
+              <li>
+                <a style="color:#f2b707" class="btn-logout" href="?pg=setting">
+                  <span class="fas fa-user-cog "></span><br>Setting
+                </a>
+              </li>
+              <li>
+                <a style="color:#f27907" href="logout.php" class="btn-logout"> <span class="fas fa-sign-out-alt  "></span><br>Keluar</a>
+              </li>
+            </ul>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="#">PSB</a>
+          </div>
+
+          <?php include "menu.php" ?>
+
+        </aside>
+      </div>
+
+      <!-- Main Content -->
+
+      <div class="main-content">
+        <section class="section">
+          <?php include "content.php"; ?>
+        </section>
+      </div>
+      <footer class="main-footer">
+        <div class="footer-left">
+          Copyright &copy; <?= date('Y') ?> PSB | <?= $setting['nama_sekolah'] ?>
+        </div>
+        <div class="footer-right">
+          Versi 1.3
+
+        </div>
+      </footer>
+    </div>
 
     </div>
 
@@ -264,19 +246,19 @@ crossorigin="anonymous"></script>
     <!-- Template JS File -->
     <script src="../assets/js/scripts.js"></script>
     <script src="../assets/js/custom.js"></script>
-	<script type="text/javascript">
-		var url = window.location;
-		// for sidebar menu entirely but not cover treeview
-		$('ul.sidebar-menu a').filter(function() {
-			return this.href == url;
-		}).parent().addClass('active');
+    <script type="text/javascript">
+      var url = window.location;
+      // for sidebar menu entirely but not cover treeview
+      $('ul.sidebar-menu a').filter(function() {
+        return this.href == url;
+      }).parent().addClass('active');
 
-		// for treeview
-		$('ul.dropdown-menu a').filter(function() {
-			return this.href == url;
-		}).closest('.treeview').addClass('active');
-	</script>
-	
+      // for treeview
+      $('ul.dropdown-menu a').filter(function() {
+        return this.href == url;
+      }).closest('.treeview').addClass('active');
+    </script>
+
     <!-- <script type='text/javascript' data-cfasync='false'>
       window.purechatApi = {
         l: [],

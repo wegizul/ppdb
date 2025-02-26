@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport" />
-    <title>PPDB ONLINE | <?= $setting['nama_sekolah'] ?></title>
+    <title>PSB ONLINE | <?= $setting['nama_sekolah'] ?></title>
     <!-- META DISKRIPSI-->
     <meta name="description" content="Mari bergabung Bersama Kami di <?= $setting['nama_sekolah'] ?>, Pendaftaran Peserta didik Baru Tahun <?= date('Y') ?> Kembali dibuka ">
     <meta name="keywords" content="simasapp v.1.1,simas madrasah, simas sekolah, web simas," />
@@ -57,12 +57,12 @@
                     <a class="navbar-brand" href="javascript:;">
                         <img src="<?= $setting['logo'] ?>" height="75" />
                         <div class="home-header-text d-none d-sm-block">
-                            <h5>PENERIMAAN PESERTA DIDIK BARU</h5>
+                            <h5>PENERIMAAN SANTRI BARU</h5>
                             <h6><?= $setting['nama_sekolah'] ?></h6>
                             <h6>Tahun <?= date('Y') ?></h6>
                         </div>
-                        <span class="logo-mini-unbk d-block d-sm-none">PPDB </span>
-                        <span class="logo-mini-tahun d-block d-sm-none">_ONLINE</span>
+                        <span class="logo-mini-unbk d-block d-sm-none">PSB </span>
+                        <span class="logo-mini-tahun d-block d-sm-none"> ONLINE</span>
                     </a>
                     <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -103,11 +103,11 @@
                                     <div class="carousel-item active">
                                         <div>
                                             <h5 data-animation="animated fadeInDownBig">
-                                                Selamat Datang di Website PPDB Online
+                                                Selamat Datang di Website PSB Online
                                             </h5>
                                             <br />
                                             <p data-animation="animated slideInRight" data-delay="1s">
-                                                Aplikasi Penerimaan Peserta Didik Baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
+                                                Aplikasi Penerimaan Santri dan Santriwati Baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
                                             </p>
                                             <p data-animation="animated slideInRight" data-delay="2s">
                                                 Pendaftaran Santri dan Santriwati Baru Tahun <?= date('Y') ?> ini telah dibuka. Segera Daftar dan lengkapi Formulir Pendaftaran
@@ -123,7 +123,7 @@
                                     <div class="carousel-item">
                                         <div>
                                             <h5 data-animation="animated fadeInDownBig">
-                                                Syarat Pendaftaran Peserta Didik Baru
+                                                Syarat Pendaftaran Santri Baru
                                             </h5>
                                             <h5 data-animation="animated fadeInDownBig">
                                                 Tahun Pelajaran 2025/2026
@@ -150,7 +150,7 @@
                                     <div class="carousel-item">
                                         <div>
                                             <h5 data-animation="animated fadeInDownBig">
-                                                Alur Pendaftaran Peserta Didik Baru
+                                                Alur Pendaftaran Santri Baru
                                             </h5>
                                             <h5 data-animation="animated fadeInDownBig">
                                                 Tahun Pelajaran 2025/2026
@@ -180,7 +180,7 @@
                         <div class="col-sm-4">
                             <div class="card card-login bg-primary">
                                 <div class="card-body">
-                                    <img src="<?= $setting['logo_ppdb'] ?>" alt="" width="85%">
+                                    <img src="<?= $setting['logo_ppdb'] ?>" alt="" width="100%" style="margin-bottom: 5px;">
                                     <br>
                                     <form id="form-login">
                                         <div class="form-group">
@@ -217,11 +217,11 @@
                             <div class="carousel-item active">
                                 <div>
                                     <h5 data-animation="animated fadeInDownBig">
-                                        Selamat Datang Di Website PPDB Online
+                                        Selamat Datang Di Website PSB Online
                                     </h5>
                                     <br />
                                     <p data-animation="animated slideInRight" data-delay="1s">
-                                        Website Resmi Penerimaan Peserta Didik Baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
+                                        Website Resmi Penerimaan Santri Baru Tahun Pelajaran 2025/2026 <?= $setting['nama_sekolah'] ?>.
                                     </p>
                                     <p data-animation="animated slideInRight" data-delay="2s">
                                         Pendaftaran Santri dan Santriwati Baru Tahun 2025 ini Belum Dibuka.
@@ -241,7 +241,7 @@
                         <div class="col-sm-4">
                             <div class="card card-login bg-primary">
                                 <div class="card-body">
-                                    <img src="<?= $setting['logo_ppdb'] ?>" alt="" width="85%">
+                                    <img src="<?= $setting['logo_ppdb'] ?>" alt="" width="100%" style="margin-bottom: 5px;">
                                     <br>
                                     <form id="form-login">
                                         <div class="form-group">
@@ -287,7 +287,7 @@
                                                     <input type="text" class="form-control" name="nama" placeholder="Nama Lengkap" autocomplete="off" required>
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="nohp">NO HANDPHONE</label>
+                                                    <label for="nohp">NO HANDPHONE*</label>
                                                     <input type="number" class="form-control" name="no_hp" placeholder="No HP Whatsapp" required>
                                                 </div>
                                             </div>
@@ -348,7 +348,6 @@
                             <div class="card-header text-white" style="background-color: #005f6b">
                                 <h4>Data Statistik Asal Sekolah Pendaftar</h4>
                                 <div class="card-header-action">
-
                                 </div>
                             </div>
                             <div class="card-body text-black" style="background-color: #fff">
@@ -356,10 +355,7 @@
                                     <table class="table table-striped table-sm" id="sortable-table">
                                         <thead>
                                             <tr>
-                                                <th class="text-center">
-
-                                                </th>
-                                                <th>NPSN</th>
+                                                <th class="text-center"></th>
                                                 <th>NAMA SEKOLAH</th>
                                                 <th class="text-center">PENDAFTAR</th>
                                             </tr>
@@ -375,7 +371,6 @@
                                                             <i class="fas fa-th"></i>
                                                         </div>
                                                     </td>
-                                                    <td><?= $sekolah['npsn_asal'] ?></td>
                                                     <td><?= $sekolah['asal_sekolah'] ?></td>
 
                                                     <td class="text-center">

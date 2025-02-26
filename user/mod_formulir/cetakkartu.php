@@ -21,14 +21,14 @@
                         <span class="badge badge-info">Diverifikasi</span>
                     <?php } ?>
                 </div>
-		
+
                 <div class="author-box-details">
 
-                    
+
                     <div class="tab-content" id="myTabContent2">
                         <div class="tab-pane fade show active" id="home3" role="tabpanel" aria-labelledby="home-tab3">
                             <form id="form-datadiri">
-								<div class="form-group row mb-2">
+                                <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Pendaftaran</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="text" name="no" class="form-control" value="<?= $siswa['no_daftar'] ?>" disabled>
@@ -37,10 +37,10 @@
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Lengkap</label>
                                     <div class="col-sm-12 col-md-7">
-                                        <input type="text" name="nama" class="form-control" value="<?= $siswa['nama'] ?>"disabled >
+                                        <input type="text" name="nama" class="form-control" value="<?= $siswa['nama'] ?>" disabled>
                                     </div>
                                 </div>
-								<div class="form-group row mb-2">
+                                <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">NISN</label>
                                     <div class="col-sm-12 col-md-7">
                                         <input type="number" name="nisn" class="form-control" value="<?= $siswa['nisn'] ?>" disabled>
@@ -55,10 +55,10 @@
                                 <div class="form-group row mb-2">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
                                     <div class="col-sm-12 col-md-7">
-                                    <a target="_blank" href="mod_formulir/print_daftar.php?id=<?= enkripsi($siswa['id_daftar']) ?>" type="button" class="badge badge-primary"><i class="fas fa-download    "></i> Download Formulir Pendaftaran</a>
+                                        <a target="_blank" href="mod_formulir/print_daftar.php?id=<?= enkripsi($siswa['id_daftar']) ?>" type="button" class="badge badge-primary"><i class="fas fa-download    "></i> Download Formulir Pendaftaran</a>
                                     </div>
                                 </div>
-								
+
                             </form>
                         </div>
 
@@ -67,18 +67,17 @@
 
                 </div>
             </div>
-			
-			 <?php if ($siswa['konfirmasi'] == 0) { ?>
-			<div class="alert alert-success alert-dismissable">
-				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-				Terimakasih !!!<br />
-				Data Anda Telah Berhasil <button class="badge badge-info"> Diperiksa Pada Tanggal  <?= $siswa['tgl_konfirmasi'] ?></button>
-				<br /><br />Download Formulir Pendaftaran  <a target="_blank" href="mod_formulir/print_daftar.php?id=<?= enkripsi($siswa['id_daftar']) ?>" type="button" class="badge badge-danger"><i class="fas fa-download    "></i> Download</a>
-			</div>
-		<?php } ?>
-		</div>
-		
+
+            <?php if ($siswa['konfirmasi'] == 0) { ?>
+                <div class="alert alert-success alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    Terimakasih,<br />
+                    Data Anda Telah Berhasil <span class="badge badge-info"> Diperiksa Pada Tanggal <?= $siswa['tgl_konfirmasi'] ?></span>
+                    <br /><br />Download Formulir Pendaftaran <a target="_blank" href="mod_formulir/print_daftar.php?id=<?= enkripsi($siswa['id_daftar']) ?>" type="button" class="badge badge-danger"><i class="fas fa-download    "></i> Download</a>
+                </div>
+            <?php } ?>
+        </div>
+
     </div>
 
 </div>
-

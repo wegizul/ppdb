@@ -13,7 +13,7 @@ if (isset($_SESSION['id_daftar'])) {
   <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>PPDB | <?= $setting['nama_sekolah'] ?></title>
+    <title>PSB | <?= $setting['nama_sekolah'] ?></title>
 
     <link rel="shortcut icon" href="../<?= $setting['logo'] ?>" />
 
@@ -73,7 +73,6 @@ if (isset($_SESSION['id_daftar'])) {
         left: 0;
         z-index: 900;
         background-color: #000;
-
       }
     </style>
     <!-- Smartsupp Live Chat script -->
@@ -127,7 +126,8 @@ if (isset($_SESSION['id_daftar'])) {
         <script
           src="https://code.jquery.com/jquery-2.2.4.min.js"
           integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-          crossorigin="anonymous"></script>
+          crossorigin="anonymous">
+        </script>
 
         <link rel="stylesheet" href="../assets/css/user.css">
 
@@ -157,11 +157,10 @@ if (isset($_SESSION['id_daftar'])) {
               </nav>
               <div class="main-sidebar sidebar-style-2">
                 <aside id="sidebar-wrapper">
-                  <div class="sidebar-brand bg-info">
-                    <img src="../<?= $setting['logo_ppdb'] ?>" width="200" alt="PPDB">&nbsp;
+                  <div class="bg-info">
+                    <img src="../<?= $setting['logo_ppdb'] ?>" width="200px" alt="LOGO" style="margin: 0 0 5px 5px;">
                   </div>
                   <div class="menu-header">
-
                     <ul>
                       <li>
                         <a style="color:#f2ee07" href="." class="btn-logout">

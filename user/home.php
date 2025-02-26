@@ -4,7 +4,7 @@
 	<div class="col-12 col-sm-12 col-lg-12">
 		<div class="card author-box card-primary">
 			<div class="card-header">
-				<h2 class="section-title">Info PPDB <?= date('Y') ?></h2>
+				<h2 class="section-title">Pendaftaran Santri Baru <?= date('Y') ?></h2>
 			</div>
 			<div class="card-body">
 				<?php if ($siswa['konfirmasi'] == 1) { ?>
